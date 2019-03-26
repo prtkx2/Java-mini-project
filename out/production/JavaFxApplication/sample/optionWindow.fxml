@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TableWindowController">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #f44336;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="891.0">
+               <children>
+                  <JFXTextField fx:id="searchquery" focusColor="#f44336" layoutX="182.0" layoutY="35.0" prefHeight="32.0" prefWidth="300.0" promptText="Entry to be searched...." style="-fx-background-color: white; -fx-border-color: white; -fx-background-radius: 25px; -fx-border-radius: 25px;" unFocusColor="#f44336">
+                     <font>
+                        <Font name="Calibri Light" size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="searchin" focusColor="#f44336" layoutX="14.0" layoutY="34.0" prefHeight="32.0" prefWidth="158.0" promptText="Column name..." style="-fx-background-color: white; -fx-border-color: white; -fx-background-radius: 25px; -fx-border-radius: 25px;" unFocusColor="#f44336">
+                     <font>
+                        <Font name="Calibri Light" size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="clickSearch" layoutX="489.0" layoutY="35.0" onAction="#searchData" prefHeight="32.0" prefWidth="68.0" style="-fx-background-color: white; -fx-background-radius: 25px; -fx-border-color: white; -fx-border-radius: 25px;" text="Search" textFill="#f44336">
+                     <font>
+                        <Font name="Calibri Light" size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow spread="0.1" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="clickAddVehicle" layoutX="697.0" layoutY="35.0" onAction="#clickAddVeh" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: white; -fx-background-radius: 25px; -fx-border-color: white; -fx-border-radius: 25px;" text="Add Your Vehicle" textFill="#f44336">
+                     <font>
+                        <Font name="Calibri Light" size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow spread="0.1" />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="regTable" prefHeight="578.0" prefWidth="721.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="46.39999467134476" text="Id" />
+          <TableColumn fx:id="col_owname" prefWidth="139.99999618530273" text="Owner's Name" />
+            <TableColumn fx:id="col_vehname" prefWidth="180.80006408691406" text="Vehicle's name" />
+            <TableColumn fx:id="col_regno" prefWidth="212.0" text="Registration No." />
+            <TableColumn fx:id="col_regdate" prefWidth="116.0" text="Reg. Date " />
+            <TableColumn fx:id="col_vehtype" prefWidth="181.5999755859375" text="Vehicle Type" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

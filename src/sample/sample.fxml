@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="575.0" prefWidth="674.0" style="-fx-background-color: #F44336;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <GridPane fx:id="pane" layoutX="52.0" layoutY="57.0" prefHeight="460.0" prefWidth="576.0" style="-fx-background-color: white;">
+          <columnConstraints>
+              <ColumnConstraints hgrow="ALWAYS" maxWidth="600.0" minWidth="10.0" prefWidth="549.3999267578125" />
+              <ColumnConstraints hgrow="ALWAYS" maxWidth="295.20001220703125" minWidth="0.0" prefWidth="25.400073242187545" />
+          </columnConstraints>
+          <rowConstraints>
+              <RowConstraints maxHeight="246.79999389648438" minHeight="10.0" prefHeight="169.39999389648438" vgrow="ALWAYS" />
+              <RowConstraints maxHeight="211.00000610351563" minHeight="10.0" prefHeight="93.80000610351564" vgrow="ALWAYS" />
+              <RowConstraints maxHeight="211.00000610351563" minHeight="10.0" prefHeight="95.20001220703125" vgrow="ALWAYS" />
+              <RowConstraints maxHeight="265.6" minHeight="10.0" prefHeight="100.79998779296875" vgrow="ALWAYS" />
+          </rowConstraints>
+          <children>
+              <JFXTextField fx:id="user" focusColor="#f44336" labelFloat="true" prefHeight="0.0" prefWidth="533.0" promptText="Username" unFocusColor="#f44336" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+              </JFXTextField>
+              <JFXPasswordField fx:id="pswd" focusColor="#f44336" labelFloat="true" prefHeight="0.0" prefWidth="533.0" promptText="Password" unFocusColor="#f44336" GridPane.rowIndex="2">
+                  <font>
+                      <Font name="Calibri Light" size="18.0" />
+                  </font>
+              </JFXPasswordField>
+            <Pane prefHeight="110.0" prefWidth="550.0" GridPane.rowIndex="3">
+               <children>
+                    <JFXButton fx:id="loginButton" alignment="CENTER" buttonType="RAISED" layoutX="221.0" layoutY="34.0" onAction="#clickLogin" prefHeight="32.0" prefWidth="107.0" ripplerFill="WHITE" style="-fx-border-color: #F44336; -fx-border-radius: 25px; -fx-background-color: #F44336; -fx-background-radius: 25px;" text="Login" textAlignment="CENTER" textFill="WHITE">
+                        <font>
+                            <Font name="Calibri Light" size="18.0" />
+                        </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" spread="0.28" />
+                     </effect>
+                    </JFXButton>
+                  <Text fx:id="connectionStatus" fill="#cbd2cc" fontSmoothingType="LCD" layoutX="460.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="107.00000195198845" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="119.0" fitWidth="127.0" layoutX="215.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/icons/user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../resources/icons/users-social-symbol.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../resources/icons/locked-padlock.png" />
+               </image>
+            </ImageView>
+          </children>
+      </GridPane>
+      <Region layoutX="-1.0" layoutY="520.0" prefHeight="135.0" prefWidth="682.0" style="-fx-background-color: white;" />
+      <Region layoutY="226.0" prefHeight="294.0" prefWidth="50.0" style="-fx-background-color: white;" />
+      <Region layoutX="630.0" layoutY="226.0" prefHeight="294.0" prefWidth="50.0" style="-fx-background-color: white;" />
+   </children>
+   <effect>
+      <GaussianBlur radius="0.0" />
+   </effect>
+</AnchorPane>
